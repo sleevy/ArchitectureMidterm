@@ -12,7 +12,7 @@
     tools:context="edu.georgiasouthern.cr04956.architecturemidterm.MainActivity">
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_marginTop="58dp"
@@ -27,7 +27,7 @@
         android:text="@string/my_name" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board2"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -35,7 +35,7 @@
         android:layout_alignParentEnd="true" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board4"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -43,7 +43,7 @@
         android:layout_alignStart="@+id/board1" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board5"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -51,7 +51,7 @@
         android:layout_alignParentEnd="true" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:layout_marginTop="22dp"
         android:id="@+id/board6"
         android:layout_width="100dp"
@@ -60,7 +60,7 @@
         android:layout_alignParentStart="true" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board7"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -68,7 +68,7 @@
         android:layout_alignStart="@+id/board4" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board8"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -76,7 +76,7 @@
         android:layout_alignParentEnd="true" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board1"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -84,7 +84,7 @@
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        app:srcCompat="@drawable/emptyBoard"
+        app:srcCompat="@drawable/empty_board"
         android:id="@+id/board3"
         android:layout_width="100dp"
         android:layout_height="100dp"

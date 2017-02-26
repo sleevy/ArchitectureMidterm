@@ -84,14 +84,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setImageBasedOnPiece(ImageView v, TicTacToeBoard.TicTacToePiece piece) {
-        int imgId = R.drawable.errBoard;
+        int imgId = R.drawable.err_board;
 
         switch (piece) {
-            case X_PIECE: imgId = R.drawable.xSymbol;
+            case X_PIECE: imgId = R.drawable.x_symbol;
                 break;
-            case O_PIECE: imgId = R.drawable.oSymbol;
+            case O_PIECE: imgId = R.drawable.o_symbol;
                 break;
-            case NO_PIECE: imgId = R.drawable.emptyBoard;
+            case NO_PIECE: imgId = R.drawable.empty_board;
                 break;
         }
 
