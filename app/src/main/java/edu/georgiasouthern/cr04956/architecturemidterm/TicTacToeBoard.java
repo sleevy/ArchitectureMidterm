@@ -31,6 +31,9 @@ public class TicTacToeBoard {
      * @param id the identifier associated with the gui board segment
      */
     public void tryToPlacePiece(int id) {
+        if(theWinner != NO_PIECE) {
+            return;
+        }
         int row = id/3;
         int column = id%3;
         if(board[row][column] == NO_PIECE) {
