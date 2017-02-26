@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ArchitectureMidterm</string>
+    <string name="my_name">Cameron Rhodes</string>
+    <string name="restart_button">Restart</string>
+    <string name="x_victory">X Wins!</string>
+    <string name="o_victory">O Wins!</string>
+    <string name="no_victory">It's a tie!</string>
+    <string name="x_turn">X's Turn</string>
+    <string name="o_turn">O's Turn</string>
+
+</resources>
