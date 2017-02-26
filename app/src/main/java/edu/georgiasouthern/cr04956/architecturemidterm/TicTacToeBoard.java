@@ -2,16 +2,9 @@ package edu.georgiasouthern.cr04956.architecturemidterm;
 
 import android.util.Log;
 
-import static android.R.attr.left;
-import static android.R.attr.right;
-import static android.icu.text.Normalizer.NO;
-import static android.os.Build.VERSION_CODES.M;
-import static android.view.View.X;
-import static edu.georgiasouthern.cr04956.architecturemidterm.TicTacToeBoard.TicTacToePiece.NONE;
 import static edu.georgiasouthern.cr04956.architecturemidterm.TicTacToeBoard.TicTacToePiece.NO_PIECE;
 import static edu.georgiasouthern.cr04956.architecturemidterm.TicTacToeBoard.TicTacToePiece.O_PIECE;
 import static edu.georgiasouthern.cr04956.architecturemidterm.TicTacToeBoard.TicTacToePiece.X_PIECE;
-import static edu.georgiasouthern.cr04956.architecturemidterm.TicTacToePiece.NO_PIECE;
 
 /**
  * Created by Cameron Rhodes on 2/26/2017.
@@ -27,6 +20,10 @@ public class TicTacToeBoard {
         board = new TicTacToePiece[3][3];
 //        isXTurn = true;
         initializeBoard();
+    }
+
+    public boolean isXTurn() {
+        return isXTurn;
     }
 
     /**
@@ -62,7 +59,26 @@ public class TicTacToeBoard {
 
     public boolean hasWinner() {
         //check rows, then columns, then diagonals
+        if(checkColumnsForWinner() || checkRowsForWinner() || checkDiagonalsForWinner()) {
+            if(theWinner != NO_PIECE) {
 
+                return true;
+            }
+        } else if(checkForTie()) {
+            theWinner = NO_PIECE;
+            return true;
+        }
+        return false;
+    }
+
+    private boolean checkForTie() {
+        for(int row = 0; row < board.length; row++) {
+            for(int column = 0; column < board[row].length; column++) {
+                if(board[row][column] == NO_PIECE)
+                    return false;
+            }
+        }
+        return true;
     }
 
     private boolean checkRowsForWinner() {
@@ -91,12 +107,22 @@ public class TicTacToeBoard {
 
     private boolean checkDiagonalsForWinner() {
         //check top-left to bottom-right
-        if() {
-
+        if(board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+            if(board[0][0] != NO_PIECE) {
+                theWinner = board[0][0];
+                return true;
+            }
         }
 
         //check bottom-left to top-right
+        if(board[2][0] == board[1][1] && board[1][1] == board[0][2]) {
+            if(board[2][0] != NO_PIECE) {
+                theWinner = board[2][0];
+                return true;
+            }
+        }
 
+        return false;
     }
 
     public TicTacToePiece getWinner() {

@@ -21,6 +21,7 @@
         android:layout_height="100dp" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_name" />
@@ -99,4 +100,13 @@
         android:gravity="center_horizontal"
         android:layout_above="@+id/board1"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/restart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRestart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/board7"
+        android:layout_alignStart="@+id/board7" />
 </RelativeLayout>
