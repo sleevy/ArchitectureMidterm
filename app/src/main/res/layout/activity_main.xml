@@ -11,15 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.georgiasouthern.cr04956.architecturemidterm.MainActivity">
 
-    <ImageView
-        app:srcCompat="@drawable/empty_board"
-        android:layout_below="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_marginTop="58dp"
-        android:id="@+id/board0"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -92,15 +83,6 @@
         android:layout_below="@+id/board0"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="@string/x_turn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtStatus"
-        android:gravity="center_horizontal"
-        android:layout_above="@+id/board1"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:text="@string/restart_button"
         android:layout_width="wrap_content"
@@ -109,4 +91,27 @@
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/board7"
         android:layout_alignStart="@+id/board7" />
+
+    <ImageView
+        app:srcCompat="@drawable/empty_board"
+        android:layout_marginTop="57dp"
+        android:id="@+id/board0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/x_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtStatus"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:textStyle="normal|bold"
+        android:typeface="normal" />
 </RelativeLayout>
