@@ -4,6 +4,7 @@ import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,6 +41,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        Button restartButton = (Button) findViewById(R.id.btnRestart);
+        restartButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                board.initializeBoard();
+                setTextBasedOnTurnOrWin();
+                setAllBoardImages();
+            }
+        });
+    }
+
+    private void setAllBoardImages() {
+        for(int id = 0; id < boardImages.length; id++) {
+            setImageBasedOnPiece(boardImages[id], board.getPiece(id));
+        }
     }
 
     private void setTextBasedOnTurnOrWin() {
@@ -68,6 +84,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setImageBasedOnPiece(ImageView v, TicTacToeBoard.TicTacToePiece piece) {
+        int imgId = R.drawable.errBoard;
 
+        switch (piece) {
+            case X_PIECE: imgId = R.drawable.xSymbol;
+                break;
+            case O_PIECE: imgId = R.drawable.oSymbol;
+                break;
+            case NO_PIECE: imgId = R.drawable.emptyBoard;
+                break;
+        }
+
+        v.setImageResource(imgId);
     }
 }
